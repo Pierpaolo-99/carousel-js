@@ -207,3 +207,28 @@ thumbnails5.addEventListener('click', function(){
   nextSlide.classList.add('active')
 })
 
+// add function for auto-play
+
+setInterval(function(){
+    activeSlide++
+
+    if (activeSlide < slides.length - 1){
+      activeSlide++
+    }
+    else{
+      activeSlide = 0
+    }
+    // select the currently active image
+    const activeImage = document.querySelector('.slider img.active')
+
+    // remove the active class
+    activeImage.classList.remove('active')
+    
+    // get the next slide
+    const nextSlide = document.querySelectorAll('.slider img')[activeSlide]
+  
+    // add active class
+    nextSlide.classList.add('active')
+
+}, 3000)
+
