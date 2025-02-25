@@ -1,0 +1,24 @@
+*
+{
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+    
+}
+
+img{
+    max-width: 100%;
+}
+
+.active{
+    display: block;
+}
+
+.slider{
+    img:not(.active){
+        display: none;
+    }
+}
